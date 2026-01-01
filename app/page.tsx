@@ -181,7 +181,7 @@ const Hero = ({ onOpenStory, onOpenVideo }: { onOpenStory: () => void, onOpenVid
 
                     <Reveal delay={300}>
                         <p className="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 max-w-xl leading-relaxed mb-10 border-l-2 border-amber-500 pl-6">
-                            From bankruptcy to owning 8 properties by age 27. I don't just sell real estate; I engineer wealth portfolios.
+                            From bankruptcy to owning 8 properties by age 27. I don&apos;t just sell real estate; I engineer wealth portfolios.
                         </p>
                     </Reveal>
 
@@ -216,7 +216,7 @@ const Hero = ({ onOpenStory, onOpenVideo }: { onOpenStory: () => void, onOpenVid
                             className="w-full h-full object-cover opacity-90 dark:opacity-80 grayscale hover:grayscale-0 transition-all duration-700"
                         />
                         <div className="absolute bottom-10 left-10 bg-white/80 dark:bg-white/10 backdrop-blur-md p-6 border-l-4 border-amber-500 max-w-xs shadow-lg dark:shadow-none">
-                            <p className="text-neutral-900 dark:text-white text-2xl font-serif italic">"Skin in the game."</p>
+                            <p className="text-neutral-900 dark:text-white text-2xl font-serif italic">&quot;Skin in the game.&quot;</p>
                             <p className="text-neutral-700 dark:text-neutral-300 text-sm mt-2">I own what I advise. 6+2 Properties acquired in 1 year.</p>
                         </div>
                     </div>
@@ -348,7 +348,7 @@ const MethodologySection = () => {
                         <div>
                             <h3 className="text-2xl text-neutral-900 dark:text-white mb-2">Detailed Market Analysis</h3>
                             <p className="text-neutral-600 dark:text-neutral-400 max-w-lg">
-                                Watch my latest "New Launch Reviews" and market explanations on the JNA Real Estate YouTube channel.
+                                Watch my latest &quot;New Launch Reviews&quot; and market explanations on the JNA Real Estate YouTube channel.
                             </p>
                         </div>
                         <a href="https://www.youtube.com/c/JNARealEstate" target="_blank" rel="noreferrer" className="flex items-center space-x-2 px-6 py-3 border border-neutral-900 dark:border-white text-neutral-900 dark:text-white hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all">
@@ -424,7 +424,7 @@ const PortfolioSection = () => {
                 </Reveal>
                 <Reveal delay={200}>
                     <p className="text-neutral-400 max-w-md mt-6 md:mt-0 text-right md:text-left">
-                        A look into my personal portfolio. These aren't just transactions; they are carefully engineered assets.
+                        A look into my personal portfolio. These aren&apos;t just transactions; they are carefully engineered assets.
                         <span className="block text-xs text-amber-500 mt-2 font-mono uppercase tracking-wider md:hidden">Scroll to view more →</span>
                     </p>
                 </Reveal>
@@ -512,7 +512,7 @@ const CTASection = ({ onOpenContact }: { onOpenContact: () => void }) => {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-400">legacy?</span>
                     </h2>
                     <p className="text-xl text-neutral-600 dark:text-neutral-400 mb-12 max-w-2xl mx-auto">
-                        I help Singaporeans move from uncertainty to owning high-performing asset portfolios. Let's analyze your next move.
+                        I help Singaporeans move from uncertainty to owning high-performing asset portfolios. Let&apos;s analyze your next move.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -621,16 +621,16 @@ export default function Home() {
 
                         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6">
                             <p className="lead text-lg text-neutral-700 dark:text-neutral-300 italic">
-                                "I am not just an agent. I am an investor first."
+                                &quot;I am not just an agent. I am an investor first.&quot;
                             </p>
                             <p className="text-neutral-600 dark:text-neutral-400">
-                                My journey didn't start with wealth; it started with the loss of it. As a teenager, I watched my family suffer through a severe bankruptcy. The trauma of losing our home and stability defined my early years and instilled in me a relentless drive for financial security.
+                                My journey didn&apos;t start with wealth; it started with the loss of it. As a teenager, I watched my family suffer through a severe bankruptcy. The trauma of losing our home and stability defined my early years and instilled in me a relentless drive for financial security.
                             </p>
                             <p className="text-neutral-600 dark:text-neutral-400">
-                                I secured a prestigious MOE Scholarship, a safe path to a teaching career. But 'safe' wasn't enough to rebuild what my family had lost. I took the biggest risk of my life: I broke my bond. I pivoted into real estate not to sell, but to understand how wealth is built.
+                                I secured a prestigious MOE Scholarship, a safe path to a teaching career. But &apos;safe&apos; wasn&apos;t enough to rebuild what my family had lost. I took the biggest risk of my life: I broke my bond. I pivoted into real estate not to sell, but to understand how wealth is built.
                             </p>
                             <p className="text-neutral-600 dark:text-neutral-400">
-                                I became an "accidental investor" out of necessity. I analyzed the market with a teacher's academic rigor and an investor's desperation. It worked. By age 27, I had acquired 8 properties.
+                                I became an &quot;accidental investor&quot; out of necessity. I analyzed the market with a teacher&apos;s academic rigor and an investor&apos;s desperation. It worked. By age 27, I had acquired 8 properties.
                             </p>
                             <p className="font-bold text-neutral-900 dark:text-white">
                                 Now, as Director of Investments at JNA, my mission is simple: To place a property investor in every household.
@@ -652,7 +652,7 @@ export default function Home() {
                 <Modal isOpen={modalType === 'contact'} onClose={closeModal} className="max-w-4xl overflow-hidden flex flex-col md:flex-row">
                     <div className="md:w-1/3 bg-neutral-100 dark:bg-neutral-800/50 p-8 flex flex-col justify-between border-r border-neutral-200 dark:border-neutral-800">
                         <div>
-                            <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-6">Let's Talk Numbers.</h3>
+                            <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-6">Let&apos;s Talk Numbers.</h3>
                             <div className="space-y-6">
                                 <div className="flex items-start space-x-3 text-neutral-600 dark:text-neutral-400">
                                     <Mail className="mt-1" size={20} />
