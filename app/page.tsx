@@ -32,7 +32,7 @@ const Reveal = ({ children, delay = 0, width = '100%' }: { children: React.React
     const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
 
     return (
-        <div ref={ref} className={`relative overflow-hidden transition-all duration-1000 ease-out transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} style={{ transitionDelay: `${delay}ms` }}>
+        <div ref={ref} className={`relative transition-all duration-1000 ease-out transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} style={{ transitionDelay: `${delay}ms` }}>
             {children}
         </div>
     );
@@ -173,7 +173,7 @@ const Hero = ({ onOpenStory, onOpenVideo }: { onOpenStory: () => void, onOpenVid
                     </Reveal>
 
                     <Reveal delay={200}>
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-medium text-neutral-900 dark:text-white leading-[0.9] tracking-tighter mb-8">
+                        <h1 className="text-5xl md:text-7xl lg:text-[95px] font-medium text-neutral-900 dark:text-white leading-[0.9] tracking-tighter mb-8">
                             The <span className="text-neutral-500 dark:text-neutral-500 italic font-serif">Accidental</span> <br />
                             Investor.
                         </h1>
