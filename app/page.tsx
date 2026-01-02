@@ -418,7 +418,7 @@ const PortfolioSection = () => {
 
     return (
         <section id="portfolio" className="py-24 bg-neutral-900 text-white overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6 mb-12 flex flex-col md:flex-row justify-between items-end">
+            <div className="max-w-7xl mx-auto px-6 mb-12 flex flex-col md:flex-row justify-between items-center md:items-end text-center md:text-left">
                 <Reveal>
                     <span className="text-amber-500 font-mono text-xs tracking-[0.2em] uppercase">The Track Record</span>
                     <h2 className="text-4xl md:text-5xl text-white mt-4 font-light">
@@ -426,7 +426,7 @@ const PortfolioSection = () => {
                     </h2>
                 </Reveal>
                 <Reveal delay={200}>
-                    <p className="text-neutral-400 max-w-md mt-6 md:mt-0 text-right md:text-left">
+                    <p className="text-neutral-400 max-w-md mt-6 md:mt-0 text-center md:text-left">
                         A look into my personal portfolio. These aren&apos;t just transactions; they are carefully engineered assets.
                         <span className="block text-xs text-amber-500 mt-2 font-mono uppercase tracking-wider md:hidden">Scroll to view more →</span>
                     </p>
