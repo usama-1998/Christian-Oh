@@ -272,7 +272,7 @@ const StorySection = () => {
                         {/* Background Image */}
                         <div className="absolute inset-0">
                             <img
-                                src="https://images.unsplash.com/photo-1506318164473-2dfd3ede3623?q=80&w=3387&auto=format&fit=crop"
+                                src="/mission_background.png"
                                 alt="Global Vision - Singapore Skyline"
                                 className="w-full h-full object-cover opacity-50 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                             />
