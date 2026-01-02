@@ -209,7 +209,7 @@ const Hero = ({ onOpenStory, onOpenVideo }: { onOpenStory: () => void, onOpenVid
                 </div>
 
                 {/* Hero Visual */}
-                <div className="md:col-span-5 relative h-[600px] hidden md:block">
+                <div className="md:col-span-5 relative h-[400px] md:h-[600px] mt-12 md:mt-0 block">
                     <div className="absolute inset-0 bg-neutral-200 dark:bg-neutral-900 overflow-hidden shadow-2xl dark:shadow-none transition-all duration-300">
                         <Image
                             src="/hero.png"
