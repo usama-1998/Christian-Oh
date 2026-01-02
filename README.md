@@ -84,6 +84,13 @@ The color scheme uses neutral tones with amber accents. Modify in `tailwind.conf
 
 ### Content
 All content can be edited directly in `app/page.tsx`.
+To update the Hero image, replace `public/hero.png` with your desired image (keep the filename the same or update the reference in `app/page.tsx`).
+
+## Deployment
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 ## License
 

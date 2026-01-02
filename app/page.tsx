@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowRight, BarChart2, Building2, ChevronDown, Instagram, Linkedin, Play, TrendingUp, Youtube, Menu, X, Mail, Phone, ArrowUpRight, Send, Sun, Moon } from 'lucide-react';
+import Image from 'next/image';
+
 
 // --- Custom Hook for Scroll Animations ---
 const useOnScreen = (options: IntersectionObserverInit) => {
@@ -166,8 +168,7 @@ const Hero = ({ onOpenStory, onOpenVideo }: { onOpenStory: () => void, onOpenVid
             <div className="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center">
                 <div className="md:col-span-7">
                     <Reveal delay={100}>
-                        <div className="inline-flex items-center space-x-2 border border-amber-500/30 rounded-full px-4 py-1.5 mb-8 bg-amber-500/5 backdrop-blur-sm">
-                            <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+                        <div className="inline-flex items-center border border-amber-500/30 rounded-full px-4 py-1.5 mb-8 bg-amber-500/5 backdrop-blur-sm">
                             <span className="text-amber-600 dark:text-amber-500 text-xs font-bold tracking-widest uppercase">Director of Investments, JNA</span>
                         </div>
                     </Reveal>
@@ -210,10 +211,12 @@ const Hero = ({ onOpenStory, onOpenVideo }: { onOpenStory: () => void, onOpenVid
                 {/* Hero Visual */}
                 <div className="md:col-span-5 relative h-[600px] hidden md:block">
                     <div className="absolute inset-0 bg-neutral-200 dark:bg-neutral-900 overflow-hidden shadow-2xl dark:shadow-none transition-all duration-300">
-                        <img
-                            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2574&auto=format&fit=crop"
+                        <Image
+                            src="/hero.png"
                             alt="Christian Oh Portrait"
-                            className="w-full h-full object-cover opacity-90 dark:opacity-80 grayscale hover:grayscale-0 transition-all duration-700"
+                            className="object-cover opacity-90 dark:opacity-80 grayscale hover:grayscale-0 transition-all duration-700"
+                            fill
+                            priority
                         />
                         <div className="absolute bottom-10 left-10 bg-white/80 dark:bg-white/10 backdrop-blur-md p-6 border-l-4 border-amber-500 max-w-xs shadow-lg dark:shadow-none">
                             <p className="text-neutral-900 dark:text-white text-2xl font-serif italic">&quot;Skin in the game.&quot;</p>
