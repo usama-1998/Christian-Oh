@@ -514,7 +514,7 @@ const CTASection = ({ onOpenContact }: { onOpenContact: () => void }) => {
                 <Reveal>
                     <h2 className="text-5xl md:text-7xl font-bold text-neutral-900 dark:text-neutral-100 mb-8 tracking-tight">
                         Ready to build your <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-400">legacy?</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-400 font-serif italic">legacy?</span>
                     </h2>
                     <p className="text-xl text-neutral-600 dark:text-neutral-400 mb-12 max-w-2xl mx-auto">
                         I help Singaporeans move from uncertainty to owning high-performing asset portfolios. Let&apos;s analyze your next move.
