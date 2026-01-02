@@ -280,12 +280,14 @@ const StorySection = () => {
                         </div>
 
                         <div className="relative z-10 p-8 flex flex-col justify-end h-full">
-                            <div className="absolute bottom-0 right-0 p-4 pointer-events-none">
-                                <TrendingUp className="text-amber-500/20" size={120} />
-                            </div>
-
                             <div className="mb-8">
-                                <h3 className="text-3xl text-white font-light mb-4 drop-shadow-lg">Mission Driven. <br />Global Vision.</h3>
+                                <h3 className="text-3xl text-white font-light mb-4 drop-shadow-lg">
+                                    Mission Driven. <br />
+                                    <span className="flex items-center gap-3">
+                                        Global Vision.
+                                        <TrendingUp className="text-amber-500" size={32} />
+                                    </span>
+                                </h3>
                                 <p className="text-neutral-200 drop-shadow-md max-w-sm">
                                     I am not a salesperson. I am a Real Estate Practitioner. My advice is rooted in my own survival and success.
                                 </p>
