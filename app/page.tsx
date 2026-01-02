@@ -616,7 +616,7 @@ export default function Home() {
                     <div className="p-8 md:p-12">
                         <div className="flex items-center space-x-4 mb-6 border-b border-neutral-200 dark:border-neutral-800 pb-6">
                             <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-amber-500">
-                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2574&auto=format&fit=crop" alt="Christian Oh" className="w-full h-full object-cover" />
+                                <img src="/hero.png" alt="Christian Oh" className="w-full h-full object-cover" />
                             </div>
                             <div>
                                 <h3 className="text-2xl font-bold text-neutral-900 dark:text-white">The Origin Story</h3>
