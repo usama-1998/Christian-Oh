@@ -600,7 +600,7 @@ export default function Home() {
                         <iframe
                             width="100%"
                             height="100%"
-                            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" // Placeholder video ID
+                            src="https://www.youtube.com/embed/I2ykHYy_fhU?autoplay=1" // Updated journey video
                             title="Christian Oh Journey"
                             className="border-0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

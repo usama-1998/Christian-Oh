@@ -11,6 +11,7 @@ A premium Next.js portfolio website for Christian Oh, a real estate investor and
 - ✨ Smooth scroll animations
 - 📊 Interactive portfolio gallery
 - 🔥 Premium UI with glassmorphism effects
+- 🎥 Watch the Journey: [YouTube Video](https://www.youtube.com/watch?v=I2ykHYy_fhU)
 
 ## Getting Started
 
