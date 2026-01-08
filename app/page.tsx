@@ -109,7 +109,7 @@ const Navigation = ({ onOpenContact, isDark, toggleTheme }: { onOpenContact: () 
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center space-x-8">
-                    <a href="#story" className="text-sm text-neutral-600 dark:text-neutral-300 hover:text-amber-500 dark:hover:text-white transition-colors">The Origin</a>
+                    <a href="#videos" className="text-sm text-neutral-600 dark:text-neutral-300 hover:text-amber-500 dark:hover:text-white transition-colors">The Origin</a>
                     <a href="#methodology" className="text-sm text-neutral-600 dark:text-neutral-300 hover:text-amber-500 dark:hover:text-white transition-colors">Methodology</a>
                     <a href="#portfolio" className="text-sm text-neutral-600 dark:text-neutral-300 hover:text-amber-500 dark:hover:text-white transition-colors">Portfolio</a>
 
@@ -158,76 +158,176 @@ const Navigation = ({ onOpenContact, isDark, toggleTheme }: { onOpenContact: () 
 
 const Hero = ({ onOpenStory, onOpenVideo }: { onOpenStory: () => void, onOpenVideo: () => void }) => {
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-neutral-50 dark:bg-neutral-950 pt-20 transition-colors duration-300">
-            {/* Abstract Background Elements */}
-            <div className="absolute inset-0 z-0 opacity-10 dark:opacity-20 pointer-events-none">
-                <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-neutral-300 dark:from-neutral-800 to-transparent transform skew-x-12" />
-                <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-tr from-amber-500/20 dark:from-amber-900/20 to-transparent rounded-full blur-3xl" />
+        <section className="relative h-screen flex items-center justify-center overflow-hidden bg-neutral-100 dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800 transition-colors duration-500">
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0 z-0 select-none">
+                <Image
+                    src="/team_hero.webp"
+                    alt="Christian Oh Team"
+                    className="object-cover object-center w-full h-full opacity-100 dark:opacity-60 transition-opacity duration-500"
+                    fill
+                    priority
+                    quality={100}
+                />
+
+                {/* Light Mode Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-100 via-neutral-100/50 to-transparent dark:hidden" />
+                <div className="absolute inset-0 bg-gradient-to-r from-neutral-100/90 via-white/20 to-transparent dark:hidden" />
+
+                {/* Dark Mode Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-black/30 hidden dark:block" />
+                <div className="absolute inset-0 bg-gradient-to-r from-neutral-950/90 via-transparent to-transparent hidden dark:block" />
             </div>
 
-            <div className="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center">
-                <div className="md:col-span-7">
+            <div className="relative z-10 w-full max-w-7xl mx-auto px-6 h-full flex flex-col justify-center">
+                <div className="max-w-4xl pt-20">
                     <Reveal delay={100}>
-                        <div className="inline-flex items-center border border-amber-500/30 rounded-full px-4 py-1.5 mb-8 bg-amber-500/5 backdrop-blur-sm">
-                            <span className="text-amber-600 dark:text-amber-500 text-xs font-bold tracking-widest uppercase">Director of Investments, JNA</span>
+                        <div className="inline-flex items-center border border-amber-500/30 rounded-full px-4 py-1.5 mb-8 bg-white/60 dark:bg-black/40 backdrop-blur-md shadow-sm">
+                            <span className="text-amber-600 dark:text-amber-500 text-xs font-bold tracking-[0.2em] uppercase">Christian Oh & Partners</span>
                         </div>
                     </Reveal>
 
                     <Reveal delay={200}>
-                        <h1 className="text-5xl md:text-7xl lg:text-[95px] font-medium text-neutral-900 dark:text-white leading-[0.9] tracking-tighter mb-8">
-                            The <span className="text-neutral-500 dark:text-neutral-500 italic font-serif">Accidental</span> <br />
-                            Investor.
+                        <h1 className="text-6xl md:text-8xl lg:text-[110px] font-light text-neutral-900 dark:text-white leading-[0.9] tracking-tighter mb-6 drop-shadow-sm dark:drop-shadow-2xl transition-colors duration-500">
+                            Real Data. <br />
+                            Real <span className="text-amber-600 dark:text-amber-500 font-serif italic">Results</span>
                         </h1>
                     </Reveal>
 
                     <Reveal delay={300}>
-                        <p className="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 max-w-xl leading-relaxed mb-10 border-l-2 border-amber-500 pl-6">
-                            From bankruptcy to owning 8 properties by age 27. I don&apos;t just sell real estate; I engineer wealth portfolios.
+                        <p className="text-2xl md:text-3xl text-neutral-700 dark:text-neutral-200 font-serif italic mb-6 max-w-lg leading-tight transition-colors duration-500">
+                            &quot;The accidental investors&quot;
+                        </p>
+
+                        <p className="text-lg text-neutral-600 dark:text-neutral-300 mb-10 max-w-lg leading-relaxed">
+                            Positioning your wealth with a team that treats your portfolio like their own. From bankruptcy to a $50M+ portfolio management empire.
                         </p>
                     </Reveal>
 
                     <Reveal delay={400}>
                         <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
-                            <button
-                                onClick={onOpenStory}
-                                className="group flex items-center justify-center px-8 py-4 bg-neutral-900 dark:bg-white text-white dark:text-black font-medium transition-all hover:bg-amber-500 dark:hover:bg-amber-500 hover:text-white dark:hover:text-white"
+                            <a
+                                href="#portfolio"
+                                className="group flex items-center justify-center px-8 py-4 bg-neutral-900 dark:bg-white text-white dark:text-black font-medium transition-all hover:bg-amber-600 dark:hover:bg-amber-500 hover:text-white dark:hover:text-white shadow-lg hover:shadow-xl rounded-none"
                             >
-                                Read My Story
+                                Check Our Portfolio
                                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
-                            </button>
-                            <button
-                                onClick={onOpenVideo}
-                                className="flex items-center space-x-3 text-neutral-900 dark:text-white hover:text-amber-600 dark:hover:text-amber-500 transition-colors group"
+                            </a>
+                            <a
+                                href="#videos"
+                                className="flex items-center space-x-3 text-neutral-800 dark:text-white hover:text-amber-600 dark:hover:text-amber-500 transition-colors group px-4 py-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5"
                             >
-                                <div className="w-12 h-12 rounded-full border border-neutral-300 dark:border-neutral-700 flex items-center justify-center group-hover:border-amber-500 transition-colors">
+                                <div className="w-12 h-12 rounded-full border border-neutral-300 dark:border-white/30 flex items-center justify-center group-hover:border-amber-500 transition-colors bg-white/40 dark:bg-white/5 backdrop-blur-sm">
                                     <Play size={20} className="ml-1" fill="currentColor" />
                                 </div>
-                                <span className="font-medium text-sm tracking-wide">Watch the Journey</span>
-                            </button>
+                                <span className="font-medium text-sm tracking-wide">Watch the Monopolycode</span>
+                            </a>
+                        </div>
+                    </Reveal>
+                </div>
+            </div>
+
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-neutral-400 dark:text-white/50 hidden md:block z-20">
+                <ChevronDown size={32} />
+            </div>
+        </section>
+    );
+};
+
+const VideoShowcase = ({ onOpenVideo }: { onOpenVideo: (videoId: string) => void }) => {
+    // Real Video IDs extracted from playlist
+    const testimonials = [
+        { id: "D1x3ivP_ceU", title: "Stewardship Client", name: "Stewardship" },
+        { id: "zDHe4FSNGo4", title: "Shiyun", name: "Shiyun" },
+        { id: "UyRY8srDA10", title: "Herron", name: "Herron" },
+        { id: "61Y4_aS_nks", title: "Steven", name: "Steven" },
+    ];
+
+    return (
+        <section id="videos" className="bg-black py-20 text-white">
+            <div className="max-w-7xl mx-auto px-6">
+                <div className="mb-16 text-center">
+                    <Reveal>
+                        <span className="text-amber-500 font-mono text-xs tracking-[0.2em] uppercase">Client Success</span>
+                        <h2 className="text-3xl md:text-5xl font-light mt-4">The Monopoly Code</h2>
+                    </Reveal>
+                </div>
+
+                {/* Main Video */}
+                <div className="mb-16">
+                    <Reveal delay={200}>
+                        <div className="aspect-video w-full max-w-5xl mx-auto rounded-2xl overflow-hidden text-center shadow-2xl border border-neutral-800 relative group">
+                            <iframe
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/I2ykHYy_fhU?autoplay=1&mute=1&loop=1&playlist=I2ykHYy_fhU"
+                                title="The Monopolycode Video"
+                                className="w-full h-full"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
                         </div>
                     </Reveal>
                 </div>
 
-                {/* Hero Visual */}
-                <div className="md:col-span-5 relative h-[400px] md:h-[600px] mt-12 md:mt-0 block">
-                    <div className="absolute inset-0 bg-neutral-200 dark:bg-neutral-900 overflow-hidden shadow-2xl dark:shadow-none transition-all duration-300">
-                        <Image
-                            src="/hero.png"
-                            alt="Christian Oh Portrait"
-                            className="object-cover opacity-90 dark:opacity-80 grayscale hover:grayscale-0 transition-all duration-700"
-                            fill
-                            priority
-                        />
-                        <div className="absolute bottom-10 left-10 bg-white/80 dark:bg-white/10 backdrop-blur-md p-6 border-l-4 border-amber-500 max-w-xs shadow-lg dark:shadow-none">
-                            <p className="text-neutral-900 dark:text-white text-2xl font-serif italic">&quot;Skin in the game.&quot;</p>
-                            <p className="text-neutral-700 dark:text-neutral-300 text-sm mt-2">I own what I advise. 6+2 Properties acquired in 1 year.</p>
-                        </div>
-                    </div>
+                {/* Testimonials */}
+                <div className="mb-8">
+                    <Reveal>
+                        <h3 className="text-2xl font-light text-white">Success Stories</h3>
+                    </Reveal>
+                </div>
+                <div className="grid md:grid-cols-4 gap-6">
+                    {testimonials.map((video, index) => (
+                        <Reveal key={index} delay={300 + (index * 100)}>
+                            <button
+                                onClick={() => onOpenVideo(video.id)}
+                                className="group cursor-pointer block w-full text-left"
+                            >
+                                <div className="aspect-[9/16] bg-neutral-900 rounded-xl overflow-hidden relative border border-neutral-800 group-hover:border-amber-500 transition-colors">
+                                    <img
+                                        src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
+                                        alt={video.title} // Fallback to Title if Name is not generic
+                                        className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 transform group-hover:scale-105"
+                                    />
+                                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
+
+                                    <div className="absolute inset-0 flex items-center justify-center">
+                                        <div className="w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center group-hover:bg-amber-500 transition-colors">
+                                            <Play className="text-white ml-1" size={20} fill="currentColor" />
+                                        </div>
+                                    </div>
+
+                                    <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/90 to-transparent">
+                                        <p className="text-xs font-mono text-amber-500 uppercase tracking-widest mb-1">{video.name}</p>
+                                        <p className="text-white font-medium leading-tight line-clamp-2">{video.title}</p>
+                                    </div>
+                                </div>
+                            </button>
+                        </Reveal>
+                    ))}
                 </div>
             </div>
+        </section>
+    );
+};
 
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-neutral-400 dark:text-neutral-600 hidden md:block">
-                <ChevronDown size={32} />
+const TargetAudience = () => {
+    return (
+        <section className="py-24 bg-white dark:bg-neutral-900 border-t border-neutral-100 dark:border-neutral-800">
+            <div className="max-w-4xl mx-auto px-6 text-center">
+                <Reveal>
+                    <h2 className="text-3xl md:text-4xl font-medium text-neutral-900 dark:text-white mb-6">
+                        People We Are <span className="text-amber-500 italic font-serif">Looking For</span>
+                    </h2>
+                    <p className="text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-2xl mx-auto">
+                        We are looking for people who like to <span className="font-bold text-neutral-900 dark:text-white">optimize their property portfolio</span>, or are seeking guidance for the <span className="font-bold text-neutral-900 dark:text-white">next best buy</span> in the market.
+                    </p>
+                    <div className="mt-8 flex justify-center gap-4 flex-wrap">
+                        <span className="px-4 py-2 bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 rounded-full text-sm">Portfolio Optimization</span>
+                        <span className="px-4 py-2 bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 rounded-full text-sm">Market Analysis</span>
+                        <span className="px-4 py-2 bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 rounded-full text-sm">Strategic Entry</span>
+                    </div>
+                </Reveal>
             </div>
         </section>
     );
@@ -238,7 +338,10 @@ const StorySection = () => {
         { year: "The Struggle", title: "Financial Trauma", desc: "My family suffered severe bankruptcy during my teenage years. I witnessed the pain of financial instability firsthand." },
         { year: "The Pivot", title: "Broken Bond", desc: "I walked away from a safe MOE Scholarship and teaching career to save my family, becoming an 'accidental investor' out of necessity." },
         { year: "The Action", title: "Risk & Reward", desc: "Dove into real estate when others hesitated. Used data, not emotion, to guide my first purchase." },
-        { year: "Today", title: "8 Properties @ 27", desc: "PropNex Millionaire. Director of Investments. My mission is to place a property investor in every household." }
+        { year: "2021", title: "PropNex Millionaire", desc: "Achieved the prestigious PropNex Millionaire award for outstanding performance." },
+        { year: "2024", title: "PropNex Millionaire", desc: "Consistently delivering top-tier results for clients." },
+        { year: "2025", title: "PropNex Millionaire", desc: "Continuing the legacy of excellence and wealth creation." },
+        { year: "Today", title: "8 Properties @ 27", desc: "Director of Investments. My mission is to place a property investor in every household." }
     ];
 
     return (
@@ -295,7 +398,7 @@ const StorySection = () => {
 
                             <div className="grid grid-cols-2 gap-4 relative z-10">
                                 <div className="p-4 bg-white/10 dark:bg-neutral-900/80 backdrop-blur-sm border border-white/20 dark:border-neutral-800">
-                                    <span className="block text-3xl font-bold text-white mb-1">2021</span>
+                                    <span className="block text-3xl font-bold text-white mb-1">2021, 2024, 2025</span>
                                     <span className="text-xs text-neutral-300 dark:text-neutral-400 uppercase">PropNex Millionaire</span>
                                 </div>
                                 <div className="p-4 bg-white/10 dark:bg-neutral-900/80 backdrop-blur-sm border border-white/20 dark:border-neutral-800">
@@ -319,184 +422,183 @@ const MethodologySection = () => {
                     <Reveal>
                         <span className="text-amber-600 dark:text-amber-500 font-mono text-xs tracking-[0.2em] uppercase">The JNA Methodology</span>
                         <h2 className="text-4xl md:text-5xl text-neutral-900 dark:text-white mt-4 font-light">
-                            Data-Driven. Factual. <span className="font-serif italic text-neutral-500">Patient.</span>
+                            The 1OPM <span className="font-serif italic text-neutral-500">Method</span>
                         </h2>
                     </Reveal>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-4 gap-6">
                     <StatCard
-                        icon={BarChart2}
-                        value="Analysis"
-                        label="In-Depth & Factual"
-                        subtext="Using technical data tools to spot undervalued opportunities invisible to the naked eye."
+                        icon={TrendingUp}
+                        value="1st"
+                        label="Mover Advantage"
+                        subtext="Entering early to capture maximum capital appreciation before market saturation."
                         delay={0}
                     />
                     <StatCard
-                        icon={Building2}
-                        value="8 Props"
-                        label="Portfolio Builder"
-                        subtext="I don't just sell. I build portfolios. My 8 properties are proof of the system."
+                        icon={X}
+                        value="Filter"
+                        label="Overpay Filter"
+                        subtext="Proprietary valuation modeling to prevent emotional overpaying."
+                        delay={100}
+                    />
+                    <StatCard
+                        icon={BarChart2}
+                        value="Gap"
+                        label="Price Gap Play"
+                        subtext="Identifying and exploiting price disparities across districts and tenures."
                         delay={200}
                     />
                     <StatCard
-                        icon={TrendingUp}
-                        value="Wealth"
-                        label="Exit Strategy"
-                        subtext="Every purchase has a clear exit plan designed for capital appreciation and legacy."
-                        delay={400}
+                        icon={Building2}
+                        value="Size"
+                        label="Multiplier Size"
+                        subtext="Scaling portfolio size through clear leverage quantification and asset power."
+                        delay={300}
                     />
                 </div>
 
-                <Reveal delay={600}>
-                    <div className="mt-16 p-8 md:p-12 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm dark:shadow-none">
-                        <div>
-                            <h3 className="text-2xl text-neutral-900 dark:text-white mb-2">Detailed Market Analysis</h3>
-                            <p className="text-neutral-600 dark:text-neutral-400 max-w-lg">
-                                Watch my latest &quot;New Launch Reviews&quot; and market explanations on the JNA Real Estate YouTube channel.
-                            </p>
-                        </div>
-                        <a href="https://www.youtube.com/c/JNARealEstate" target="_blank" rel="noreferrer" className="flex items-center space-x-2 px-6 py-3 border border-neutral-900 dark:border-white text-neutral-900 dark:text-white hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all">
-                            <Youtube size={20} />
-                            <span>Visit JNA YouTube</span>
-                        </a>
-                    </div>
-                </Reveal>
+                <div className="text-center mt-12 pb-12">
+                    {/* <p className="text-sm text-neutral-500 font-mono uppercase tracking-widest">(1OPM Method)</p> */}
+                </div>
             </div>
         </section>
     );
 };
 
 const PortfolioSection = () => {
-    const [activeId, setActiveId] = useState(1);
-
     const portfolioItems = [
         {
-            id: 1,
-            title: "The First Leap",
-            location: "District 19",
+            year: "2018",
+            title: "1st Investment",
+            location: "1+Study -> 4 Bedder",
             type: "Residential",
-            stats: { roi: "+28%", yield: "3.8%" },
-            desc: "Upgrading from HDB to Condo using the 'Asset Progression' model.",
+            stats: { roi: "Recycled", yield: "4.5% Prev" },
+            desc: "Rented at 4.5% rental yield previously. Recycled and invested into 4 bedder new launch.",
             image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2653&auto=format&fit=crop"
         },
         {
-            id: 2,
-            title: "Undervalued Gem",
-            location: "Core Central Region",
-            type: "Luxury",
-            stats: { roi: "+15%", yield: "4.2%" },
-            desc: "Spotted a below-market entry price in a prime district using gap analysis.",
+            year: "2020",
+            title: "2nd Property",
+            location: "Retirement Plan",
+            type: "Residential",
+            stats: { roi: "+36.7%", yield: "$6.7k/mo" },
+            desc: "Rose 36.7% in 3 years. Sold and reinvested into a high rental 6% property.",
             image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2670&auto=format&fit=crop"
         },
         {
-            id: 3,
-            title: "Industrial Cashflow",
-            location: "B2 Industrial",
-            type: "Commercial",
-            stats: { roi: "N/A", yield: "6.5%" },
-            desc: "Diversifying into high-yield industrial assets for consistent passive income.",
+            year: "2021",
+            title: "3rd Property",
+            location: "Assets Progression",
+            type: "Residential",
+            stats: { roi: "+37%", yield: "$5.8k/mo" },
+            desc: "Rose 37% in 3.5 years. Rented at $5.8K, sold to transit to next property.",
             image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop"
         },
         {
-            id: 4,
-            title: "The 8th Property",
-            location: "District 15",
-            type: "Investment",
-            stats: { roi: "Pending", yield: "3.5%" },
-            desc: "Capitalizing on the transformation of the East Coast region.",
+            year: "2022",
+            title: "4th Property",
+            location: "Dual Key Unit",
+            type: "Residential",
+            stats: { roi: "Dad's Retirement", yield: "6.8%" },
+            desc: "High rental yield Dual Key Unit 6.8%, $4500 to retire my dad.",
             image: "https://images.unsplash.com/photo-1515263487990-61b07816b324?q=80&w=2670&auto=format&fit=crop"
         },
         {
-            id: 5,
-            title: "The Shophouse",
-            location: "Chinatown",
-            type: "Heritage",
-            stats: { roi: "+45%", yield: "2.9%" },
-            desc: "Preserving heritage while securing a scarce asset class with perpetual value.",
+            year: "2023",
+            title: "5th Property",
+            location: "Co-Investment",
+            type: "Residential",
+            stats: { roi: "Family", yield: "$6.4k/mo" },
+            desc: "Co-invested with sister - $6.4k Rental.",
             image: "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=2670&auto=format&fit=crop"
+        },
+        {
+            year: "2024",
+            title: "Commercial",
+            location: "4 Commercial Props",
+            type: "Commercial",
+            stats: { roi: "15.5% ROE", yield: "$27,250/mo" },
+            desc: "4 commercial properties. 15.5% ROE consistently through nett rental alone.",
+            image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2301&auto=format&fit=crop"
         }
     ];
 
     return (
-        <section id="portfolio" className="py-24 bg-neutral-900 text-white overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6 mb-12 flex flex-col md:flex-row justify-between items-center md:items-end text-center md:text-left">
+        <section id="portfolio" className="py-24 bg-neutral-900 text-white relative overflow-hidden">
+            {/* Background decorative elements */}
+            <div className="absolute top-0 right-0 w-96 h-96 bg-amber-900/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-neutral-800/20 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="max-w-7xl mx-auto px-6 mb-20 text-center relative z-10">
                 <Reveal>
                     <span className="text-amber-500 font-mono text-xs tracking-[0.2em] uppercase">The Track Record</span>
                     <h2 className="text-4xl md:text-5xl text-white mt-4 font-light">
-                        8 Properties <span className="text-neutral-500 font-serif italic">@ 27</span>
+                        9 Properties <span className="text-neutral-500 font-serif italic">Managed</span>
                     </h2>
-                </Reveal>
-                <Reveal delay={200}>
-                    <p className="text-neutral-400 max-w-md mt-6 md:mt-0 text-center md:text-left">
-                        A look into my personal portfolio. These aren&apos;t just transactions; they are carefully engineered assets.
-                        <span className="block text-xs text-amber-500 mt-2 font-mono uppercase tracking-wider md:hidden">Scroll to view more →</span>
-                    </p>
+                    <p className="text-2xl mt-4 text-amber-500 font-bold">$50,650 <span className="text-sm font-normal text-neutral-400">Monthly Rental Income</span></p>
                 </Reveal>
             </div>
 
-            {/* Interactive Accordion Gallery with Horizontal Scroll */}
-            <div className="w-full overflow-x-auto pb-8 hide-scrollbar">
-                <div className="min-w-[1000px] md:min-w-0 md:w-full px-6 h-[600px] flex flex-row gap-4">
-                    {portfolioItems.map((item, index) => (
-                        <div
-                            key={item.id}
-                            onMouseEnter={() => setActiveId(item.id)}
-                            onClick={() => setActiveId(item.id)} // For mobile tap interaction
-                            className={`relative rounded-2xl overflow-hidden cursor-pointer transition-[flex] duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] flex-shrink-0 md:flex-shrink ${activeId === item.id
-                                ? 'flex-[3] min-w-[350px] shadow-2xl shadow-amber-900/20'
-                                : 'flex-[1] min-w-[100px] opacity-60 hover:opacity-80'
-                                }`}
-                        >
-                            {/* Background Image */}
-                            <div className="absolute inset-0">
-                                <img
-                                    src={item.image}
-                                    alt={item.title}
-                                    className={`w-full h-full object-cover transition-transform duration-1000 ${activeId === item.id ? 'scale-110' : 'scale-100'}`}
-                                />
-                                <div className={`absolute inset-0 bg-gradient-to-b from-transparent via-neutral-900/20 to-neutral-900 transition-opacity duration-500 ${activeId === item.id ? 'opacity-90' : 'opacity-60'}`} />
-                            </div>
+            <div className="max-w-6xl mx-auto px-4 relative z-10">
+                <div className="relative">
+                    {/* Central Line */}
+                    <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-amber-500/30 to-transparent" />
 
-                            {/* Content Content - Visible when Active */}
-                            <div className={`absolute inset-0 p-8 flex flex-col justify-end transition-all duration-500 ${activeId === item.id ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                                <div className="bg-neutral-900/80 backdrop-blur-md p-6 rounded-xl border border-neutral-800">
-                                    <div className="flex justify-between items-start mb-4">
-                                        <div className="min-w-0">
-                                            <span className="text-amber-500 text-xs font-bold tracking-widest uppercase mb-2 block truncate">{item.type}</span>
-                                            <h3 className="text-3xl font-light text-white truncate">{item.title}</h3>
-                                            <p className="text-neutral-400 text-sm mt-1 truncate">{item.location}</p>
-                                        </div>
-                                        <div className="bg-white text-black rounded-full p-2 flex-shrink-0 ml-4">
-                                            <ArrowUpRight size={20} />
-                                        </div>
+                    <div className="space-y-8 md:space-y-0">
+                        {portfolioItems.map((item, index) => (
+                            <Reveal key={index} delay={index * 100}>
+                                <div className={`flex flex-col md:flex-row items-center w-full ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+
+                                    {/* Empty Space for alignment */}
+                                    <div className="hidden md:block w-1/2" />
+
+                                    {/* Timeline Node */}
+                                    <div className="absolute left-4 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center w-8 h-8 rounded-full bg-neutral-900 border border-amber-500 z-10 shadow-[0_0_15px_rgba(245,158,11,0.3)]">
+                                        <div className="w-2 h-2 bg-amber-500 rounded-full" />
                                     </div>
 
-                                    <p className="text-neutral-300 text-sm mb-6 leading-relaxed border-l-2 border-amber-500 pl-4 line-clamp-3 md:line-clamp-none">
-                                        {item.desc}
-                                    </p>
+                                    {/* Content Card */}
+                                    <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${index % 2 === 0 ? 'md:pr-16 text-left' : 'md:pl-16 text-left'}`}>
+                                        <div className="group relative bg-neutral-800/40 backdrop-blur-sm border border-neutral-700/50 hover:border-amber-500/50 rounded-2xl p-1 overflow-hidden transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-amber-900/10 hover:bg-neutral-800/60">
 
-                                    <div className="grid grid-cols-2 gap-4 border-t border-neutral-800 pt-4">
-                                        <div>
-                                            <p className="text-xs text-neutral-500 uppercase">Est. Appreciation</p>
-                                            <p className="text-xl font-bold text-white">{item.stats.roi}</p>
-                                        </div>
-                                        <div>
-                                            <p className="text-xs text-neutral-500 uppercase">Rental Yield</p>
-                                            <p className="text-xl font-bold text-white">{item.stats.yield}</p>
+                                            <div className="flex flex-col sm:flex-row h-full">
+                                                {/* Image Section */}
+                                                <div className="relative h-48 sm:h-auto sm:w-1/3 overflow-hidden rounded-xl">
+                                                    <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100" />
+                                                    <div className="absolute top-2 left-2 bg-black/60 backdrop-blur-md px-2 py-1 rounded text-xs font-mono text-amber-500 border border-white/10">
+                                                        {item.year}
+                                                    </div>
+                                                </div>
+
+                                                {/* Text Section */}
+                                                <div className="p-5 sm:w-2/3 flex flex-col justify-between">
+                                                    <div>
+                                                        <h3 className="text-xl font-medium text-white mb-1 group-hover:text-amber-500 transition-colors">{item.title}</h3>
+                                                        <p className="text-neutral-400 text-xs uppercase tracking-wider mb-3">{item.location}</p>
+                                                        <p className="text-neutral-300 text-sm leading-relaxed mb-4 line-clamp-3">
+                                                            {item.desc}
+                                                        </p>
+                                                    </div>
+
+                                                    <div className="flex gap-2">
+                                                        <div className="px-3 py-1.5 rounded bg-amber-500/10 border border-amber-500/20">
+                                                            <span className="text-[10px] text-amber-500/70 block uppercase">ROI</span>
+                                                            <span className="text-sm font-bold text-amber-500">{item.stats.roi}</span>
+                                                        </div>
+                                                        <div className="px-3 py-1.5 rounded bg-white/5 border border-white/10">
+                                                            <span className="text-[10px] text-neutral-400 block uppercase">Yield</span>
+                                                            <span className="text-sm font-bold text-neutral-200">{item.stats.yield}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            {/* Vertical Label - Visible when Inactive (Desktop) */}
-                            <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${activeId === item.id ? 'opacity-0' : 'opacity-100'}`}>
-                                <h3 className="text-2xl font-bold text-white tracking-widest uppercase -rotate-90 whitespace-nowrap drop-shadow-lg pointer-events-none">
-                                    {item.title}
-                                </h3>
-                            </div>
-                        </div>
-                    ))}
+                            </Reveal>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
@@ -512,12 +614,12 @@ const CTASection = ({ onOpenContact }: { onOpenContact: () => void }) => {
 
             <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
                 <Reveal>
-                    <h2 className="text-5xl md:text-7xl font-bold text-neutral-900 dark:text-neutral-100 mb-8 tracking-tight">
+                    <h2 className="text-5xl md:text-7xl font-bold text-neutral-900 dark:text-neutral-100 mb-8 tracking-tight py-2">
                         Ready to build your <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-400 font-serif italic">legacy?</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-400 font-serif italic pr-2">legacy?</span>
                     </h2>
                     <p className="text-xl text-neutral-600 dark:text-neutral-400 mb-12 max-w-2xl mx-auto">
-                        I help Singaporeans move from uncertainty to owning high-performing asset portfolios. Let&apos;s analyze your next move.
+                        We are looking for people who like to optimize their property portfolio, or are seeking guidance for the next best buy in the market.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -588,9 +690,19 @@ export default function Home() {
                     onOpenStory={() => setModalType('story')}
                     onOpenVideo={() => setModalType('video')}
                 />
-                <StorySection />
+                <VideoShowcase onOpenVideo={(videoId) => {
+                    // Reuse the existing video modal logic, but we might want to store the specific video ID
+                    // Since the current generic video modal is hardcoded to the main video, we should update the modal to accept an ID or create a new state.
+                    // For now, let's assume we want to open a generic video modal, but we should probably update the Home component state to hold the ID.
+                    // Let's quickly patch Home to handle this better in the next step or right here if possible.
+                    // Actually, I can't easily change the Home component state logic from here without changing the Home component definition.
+                    // I will pass the ID up.
+                    setModalType('video');
+                }} />
                 <MethodologySection />
                 <PortfolioSection />
+                <StorySection />
+                {/* <TargetAudience /> */}
                 <CTASection onOpenContact={() => setModalType('contact')} />
                 <Footer />
 
@@ -683,7 +795,12 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="mt-12">
-                            <p className="text-xs text-neutral-500">
+                            <div className="mb-2">
+                                <h4 className="text-neutral-900 dark:text-white font-bold mb-1">2021/2024/2025</h4>
+                                <p className="text-sm text-amber-600 dark:text-amber-500">Millionaire Propnex</p>
+                            </div>
+
+                            <p className="text-xs text-neutral-500 mt-4">
                                 Prefer a direct link? <a href="https://linktr.ee/christianoh" target="_blank" rel="noreferrer" className="text-amber-600 dark:text-amber-500 underline">View Linktree</a>
                             </p>
                         </div>
