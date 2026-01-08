@@ -67,10 +67,10 @@ christian-oh-portfolio/
 ## Key Sections
 
 1. **Hero** - Dynamic landing section with call-to-action
-2. **Story** - Timeline of Christian's journey from bankruptcy to success
+2. **Video Showcase** - Curated success stories and testimonials
 3. **Methodology** - Data-driven approach to real estate
-4. **Portfolio** - Interactive accordion gallery of 5 properties
-5. **Contact** - Consultation booking form
+4. **Portfolio** - Interactive accordion gallery of properties
+5. **Contact** - Partner checklist and consultation booking form
 
 ## Customization
 
