@@ -705,6 +705,7 @@ const Footer = () => {
 
 export default function Home() {
     const [modalType, setModalType] = useState<'video' | 'story' | 'contact' | null>(null);
+    const [activeVideoId, setActiveVideoId] = useState<string>("I2ykHYy_fhU");
     const [isDark, setIsDark] = useState(true);
 
     const closeModal = () => setModalType(null);
@@ -721,15 +722,13 @@ export default function Home() {
                 />
                 <Hero
                     onOpenStory={() => setModalType('story')}
-                    onOpenVideo={() => setModalType('video')}
+                    onOpenVideo={() => {
+                        setActiveVideoId("I2ykHYy_fhU");
+                        setModalType('video');
+                    }}
                 />
                 <VideoShowcase onOpenVideo={(videoId) => {
-                    // Reuse the existing video modal logic, but we might want to store the specific video ID
-                    // Since the current generic video modal is hardcoded to the main video, we should update the modal to accept an ID or create a new state.
-                    // For now, let's assume we want to open a generic video modal, but we should probably update the Home component state to hold the ID.
-                    // Let's quickly patch Home to handle this better in the next step or right here if possible.
-                    // Actually, I can't easily change the Home component state logic from here without changing the Home component definition.
-                    // I will pass the ID up.
+                    setActiveVideoId(videoId);
                     setModalType('video');
                 }} />
                 <MethodologySection />
@@ -747,7 +746,7 @@ export default function Home() {
                         <iframe
                             width="100%"
                             height="100%"
-                            src="https://www.youtube.com/embed/I2ykHYy_fhU?autoplay=1" // Updated journey video
+                            src={`https://www.youtube.com/embed/${activeVideoId}?autoplay=1`}
                             title="Christian Oh Journey"
                             className="border-0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
