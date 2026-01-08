@@ -109,7 +109,7 @@ const Navigation = ({ onOpenContact, isDark, toggleTheme }: { onOpenContact: () 
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center space-x-8">
-                    <a href="#videos" className="text-sm text-neutral-600 dark:text-neutral-300 hover:text-amber-500 dark:hover:text-white transition-colors">The Origin</a>
+                    {/* <a href="#videos" className="text-sm text-neutral-600 dark:text-neutral-300 hover:text-amber-500 dark:hover:text-white transition-colors">The Origin</a> */}
                     <a href="#methodology" className="text-sm text-neutral-600 dark:text-neutral-300 hover:text-amber-500 dark:hover:text-white transition-colors">Methodology</a>
                     <a href="#portfolio" className="text-sm text-neutral-600 dark:text-neutral-300 hover:text-amber-500 dark:hover:text-white transition-colors">Portfolio</a>
 
@@ -145,7 +145,7 @@ const Navigation = ({ onOpenContact, isDark, toggleTheme }: { onOpenContact: () 
                 {/* Mobile Menu Overlay */}
                 {isOpen && (
                     <div className="absolute top-full left-0 w-full bg-white dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800 p-6 flex flex-col space-y-4 md:hidden shadow-xl">
-                        <a href="#story" onClick={() => setIsOpen(false)} className="text-neutral-600 dark:text-neutral-300">The Origin</a>
+                        {/* <a href="#story" onClick={() => setIsOpen(false)} className="text-neutral-600 dark:text-neutral-300">The Origin</a> */}
                         <a href="#methodology" onClick={() => setIsOpen(false)} className="text-neutral-600 dark:text-neutral-300">Methodology</a>
                         <a href="#portfolio" onClick={() => setIsOpen(false)} className="text-neutral-600 dark:text-neutral-300">Portfolio</a>
                         <button onClick={() => { setIsOpen(false); onOpenContact(); }} className="text-amber-500 font-bold text-left">Book Consultation</button>
@@ -333,86 +333,7 @@ const TargetAudience = () => {
     );
 };
 
-const StorySection = () => {
-    const milestones = [
-        { year: "The Struggle", title: "Financial Trauma", desc: "My family suffered severe bankruptcy during my teenage years. I witnessed the pain of financial instability firsthand." },
-        { year: "The Pivot", title: "Broken Bond", desc: "I walked away from a safe MOE Scholarship and teaching career to save my family, becoming an 'accidental investor' out of necessity." },
-        { year: "The Action", title: "Risk & Reward", desc: "Dove into real estate when others hesitated. Used data, not emotion, to guide my first purchase." },
-        { year: "2021", title: "PropNex Millionaire", desc: "Achieved the prestigious PropNex Millionaire award for outstanding performance." },
-        { year: "2024", title: "PropNex Millionaire", desc: "Consistently delivering top-tier results for clients." },
-        { year: "2025", title: "PropNex Millionaire", desc: "Continuing the legacy of excellence and wealth creation." },
-        { year: "Today", title: "8 Properties @ 27", desc: "Director of Investments. My mission is to place a property investor in every household." }
-    ];
 
-    return (
-        <section id="story" className="py-24 bg-white dark:bg-neutral-900 relative transition-colors duration-300">
-            <div className="max-w-7xl mx-auto px-6">
-                <Reveal>
-                    <div className="mb-20">
-                        <h2 className="text-4xl md:text-6xl font-medium text-neutral-900 dark:text-white mb-6">
-                            From <span className="text-amber-500">Bankruptcy</span><br />
-                            to <span className="text-neutral-500 dark:text-neutral-500 italic font-serif">Wealth</span> Creation.
-                        </h2>
-                        <div className="h-1 w-20 bg-amber-500"></div>
-                    </div>
-                </Reveal>
-
-                <div className="grid md:grid-cols-2 gap-16">
-                    <div>
-                        {milestones.map((item, index) => (
-                            <Reveal key={index} delay={index * 150}>
-                                <div className="relative pl-8 pb-12 border-l border-neutral-200 dark:border-neutral-800 last:border-0 hover:border-amber-500 dark:hover:border-amber-500 transition-colors group">
-                                    <div className="absolute left-[-5px] top-0 w-2.5 h-2.5 bg-neutral-300 dark:bg-neutral-800 rounded-full group-hover:bg-amber-500 transition-colors" />
-                                    <span className="text-xs font-mono text-amber-600 dark:text-amber-500 mb-2 block tracking-widest uppercase">{item.year}</span>
-                                    <h3 className="text-2xl text-neutral-900 dark:text-white font-serif italic mb-2">{item.title}</h3>
-                                    <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">{item.desc}</p>
-                                </div>
-                            </Reveal>
-                        ))}
-                    </div>
-
-                    <div className="relative h-full min-h-[500px] bg-neutral-100 dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 overflow-hidden group shadow-xl dark:shadow-none">
-                        {/* Background Image */}
-                        <div className="absolute inset-0">
-                            <img
-                                src="/mission_background.png"
-                                alt="Global Vision - Singapore Skyline"
-                                className="w-full h-full object-cover opacity-50 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/50 to-transparent dark:from-neutral-950 dark:via-neutral-950/80" />
-                        </div>
-
-                        <div className="relative z-10 p-8 flex flex-col justify-end h-full">
-                            <div className="mb-8">
-                                <h3 className="text-3xl text-white font-light mb-4 drop-shadow-lg">
-                                    Mission Driven. <br />
-                                    <span className="flex items-center gap-3">
-                                        Global Vision.
-                                        <TrendingUp className="text-amber-500" size={32} />
-                                    </span>
-                                </h3>
-                                <p className="text-neutral-200 drop-shadow-md max-w-sm">
-                                    I am not a salesperson. I am a Real Estate Practitioner. My advice is rooted in my own survival and success.
-                                </p>
-                            </div>
-
-                            <div className="grid grid-cols-2 gap-4 relative z-10">
-                                <div className="p-4 bg-white/10 dark:bg-neutral-900/80 backdrop-blur-sm border border-white/20 dark:border-neutral-800">
-                                    <span className="block text-3xl font-bold text-white mb-1">2021, 2024, 2025</span>
-                                    <span className="text-xs text-neutral-300 dark:text-neutral-400 uppercase">PropNex Millionaire</span>
-                                </div>
-                                <div className="p-4 bg-white/10 dark:bg-neutral-900/80 backdrop-blur-sm border border-white/20 dark:border-neutral-800">
-                                    <span className="block text-3xl font-bold text-white mb-1">Top 1%</span>
-                                    <span className="text-xs text-neutral-300 dark:text-neutral-400 uppercase">Sales Volume</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-};
 
 const MethodologySection = () => {
     return (
@@ -733,7 +654,7 @@ export default function Home() {
                 }} />
                 <MethodologySection />
                 <PortfolioSection />
-                <StorySection />
+                {/* <StorySection /> */}
                 {/* <TargetAudience /> */}
                 <CTASection onOpenContact={() => setModalType('contact')} />
                 <Footer />
