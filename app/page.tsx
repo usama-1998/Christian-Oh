@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowRight, BarChart2, Building2, ChevronDown, Instagram, Linkedin, Play, TrendingUp, Youtube, Menu, X, Mail, Phone, ArrowUpRight, Send, Sun, Moon } from 'lucide-react';
+import { ArrowRight, BarChart2, Building2, ChevronDown, Instagram, Linkedin, Play, TrendingUp, Youtube, Menu, X, Mail, Phone, ArrowUpRight, Send, Sun, Moon, Check } from 'lucide-react';
 import Image from 'next/image';
 
 
@@ -606,40 +606,73 @@ const PortfolioSection = () => {
 };
 
 const CTASection = ({ onOpenContact }: { onOpenContact: () => void }) => {
+    const checklistItems = [
+        "Investors looking to transition from HDB/Condo to multiple asset classes.",
+        "Families planning multi-generational wealth and retirement via rental income.",
+        "Business owners seeking commercial assets with >5% yield and tax efficiency."
+    ];
+
     return (
         <section className="py-32 bg-white dark:bg-neutral-900 relative overflow-hidden transition-colors duration-300">
+            {/* Background Texture */}
             <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] invert dark:invert-0"></div>
             </div>
 
-            <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-                <Reveal>
-                    <h2 className="text-5xl md:text-7xl font-bold text-neutral-900 dark:text-neutral-100 mb-8 tracking-tight py-2">
-                        Ready to build your <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-400 font-serif italic pr-2">legacy?</span>
-                    </h2>
-                    <p className="text-xl text-neutral-600 dark:text-neutral-400 mb-12 max-w-2xl mx-auto">
-                        We are looking for people who like to optimize their property portfolio, or are seeking guidance for the next best buy in the market.
-                    </p>
+            <div className="max-w-7xl mx-auto px-6 relative z-10">
+                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <Reveal>
+                        <div>
+                            <span className="text-amber-500 font-mono text-xs tracking-[0.2em] uppercase mb-4 block">Take Action</span>
+                            <h2 className="text-5xl md:text-7xl font-bold text-neutral-900 dark:text-neutral-100 mb-6 tracking-tight">
+                                Are You Ready <br />
+                                To <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-400 font-serif italic pr-2">Scale?</span>
+                            </h2>
+                            <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-8 leading-relaxed max-w-xl">
+                                We are looking for partners who are serious about optimizing their property portfolio. Whether you're seeking guidance for your next best buy or looking to restructure for retirement.
+                            </p>
 
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <button
-                            onClick={onOpenContact}
-                            className="w-full sm:w-auto px-10 py-5 bg-neutral-900 dark:bg-white text-white dark:text-neutral-950 font-medium hover:bg-amber-500 dark:hover:bg-amber-400 hover:scale-105 transition-all duration-300 shadow-xl"
-                        >
-                            Book a Consultation
-                        </button>
-                        <a
-                            href="https://www.instagram.com/"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="w-full sm:w-auto px-10 py-5 border border-neutral-300 dark:border-neutral-700 text-neutral-900 dark:text-white font-medium hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all duration-300 flex items-center justify-center gap-2"
-                        >
-                            <Instagram size={20} />
-                            <span>Follow Lifestyle</span>
-                        </a>
-                    </div>
-                </Reveal>
+                            <div className="flex flex-col sm:flex-row items-center gap-4">
+                                <button
+                                    onClick={onOpenContact}
+                                    className="w-full sm:w-auto px-10 py-4 bg-neutral-900 dark:bg-white text-white dark:text-neutral-950 font-medium hover:bg-amber-500 dark:hover:bg-amber-400 hover:scale-105 transition-all duration-300 shadow-xl flex items-center justify-center gap-2"
+                                >
+                                    Book a Consultation <ArrowRight size={18} />
+                                </button>
+                                <a
+                                    href="https://www.instagram.com/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="w-full sm:w-auto px-10 py-4 border border-neutral-300 dark:border-neutral-700 text-neutral-900 dark:text-white font-medium hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all duration-300 flex items-center justify-center gap-2"
+                                >
+                                    <Instagram size={20} />
+                                    <span>Follow Lifestyle</span>
+                                </a>
+                            </div>
+                        </div>
+                    </Reveal>
+
+                    <Reveal delay={200}>
+                        <div className="bg-neutral-50 dark:bg-neutral-800/50 p-8 md:p-12 rounded-3xl border border-neutral-200 dark:border-neutral-700 shadow-2xl relative overflow-hidden group hover:border-amber-500/30 transition-colors duration-500">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-amber-500/20 transition-colors duration-700 pointer-events-none" />
+
+                            <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-8 relative z-10">Who We Work Best With</h3>
+
+                            <div className="space-y-6 relative z-10">
+                                {checklistItems.map((item, index) => (
+                                    <div key={index} className="flex items-start gap-4">
+                                        <div className="mt-1 min-w-[24px] w-6 h-6 rounded-full bg-green-500/10 dark:bg-green-500/20 flex items-center justify-center border border-green-500/20">
+                                            <Check size={14} className="text-green-600 dark:text-green-400" strokeWidth={3} />
+                                        </div>
+                                        <p className="text-neutral-700 dark:text-neutral-300 font-medium leading-snug">
+                                            {item}
+                                        </p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </Reveal>
+                </div>
             </div>
         </section>
     );
