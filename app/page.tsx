@@ -18,12 +18,13 @@ const useOnScreen = (options: IntersectionObserverInit) => {
             }
         }, options);
 
-        if (ref.current) {
-            observer.observe(ref.current);
+        const currentRef = ref.current;
+        if (currentRef) {
+            observer.observe(currentRef);
         }
 
         return () => {
-            if (ref.current) observer.unobserve(ref.current);
+            if (currentRef) observer.unobserve(currentRef);
         };
     }, [ref, options]);
 
@@ -550,7 +551,7 @@ const CTASection = ({ onOpenContact }: { onOpenContact: () => void }) => {
                                 To <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-400 font-serif italic pr-2">Scale?</span>
                             </h2>
                             <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-8 leading-relaxed max-w-xl">
-                                We are looking for partners who are serious about optimizing their property portfolio. Whether you're seeking guidance for your next best buy or looking to restructure for retirement.
+                                We are looking for partners who are serious about optimizing their property portfolio. Whether you&apos;re seeking guidance for your next best buy or looking to restructure for retirement.
                             </p>
 
                             <div className="flex flex-col sm:flex-row items-center gap-4">
