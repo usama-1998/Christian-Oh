@@ -237,10 +237,10 @@ const Hero = ({ onOpenStory, onOpenVideo }: { onOpenStory: () => void, onOpenVid
 const VideoShowcase = ({ onOpenVideo }: { onOpenVideo: (videoId: string) => void }) => {
     // Real Video IDs extracted from playlist
     const testimonials = [
-        { id: "D1x3ivP_ceU", title: "Stewardship Client", name: "Stewardship" },
-        { id: "zDHe4FSNGo4", title: "Shiyun", name: "Shiyun" },
-        { id: "UyRY8srDA10", title: "Herron", name: "Herron" },
-        { id: "61Y4_aS_nks", title: "Steven", name: "Steven" },
+        { id: "UyRY8srDA10", title: "Herron", name: "Client Success" },
+        { id: "61Y4_aS_nks", title: "Steven", name: "Client Success" },
+        { id: "D1x3ivP_ceU", title: "Stewardship Client", name: "Client Success" },
+        { id: "bmECa9mAZNk", title: "Client Success", name: "Client Success" },
     ];
 
     return (
