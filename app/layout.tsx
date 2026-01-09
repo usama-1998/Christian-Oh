@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import ContactWidget from "./components/ContactWidget";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -39,7 +40,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" className={`${inter.variable} ${playfair.variable} ${jetbrainsMono.variable}`}>
-            <body className={inter.className}>{children}</body>
+            <body className={inter.className}>
+                {children}
+                <ContactWidget />
+            </body>
         </html>
     );
 }

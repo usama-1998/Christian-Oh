@@ -13,6 +13,7 @@ A premium Next.js portfolio website for Christian Oh, a real estate investor and
 - ✨ Smooth scroll animations
 - 📊 Interactive portfolio gallery
 - 🔥 Premium UI with glassmorphism effects
+- 💬 WhatsApp Contact Widget for instant communication
 - 🎥 Watch the Journey: [YouTube Video](https://www.youtube.com/watch?v=I2ykHYy_fhU)
 
 ## Getting Started
@@ -73,6 +74,7 @@ christian-oh-portfolio/
 3. **Methodology** - Data-driven approach to real estate (1OPM Method)
 4. **Portfolio** - Interactive accordion gallery of properties
 5. **Contact** - Partner checklist and consultation booking form
+6. **WhatsApp Widget** - Fixed contact button with popup chat interface
 
 ## Customization
 
