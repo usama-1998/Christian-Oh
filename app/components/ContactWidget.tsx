@@ -105,7 +105,7 @@ export default function ContactWidget() {
                 </div>
 
                 {/* Body */}
-                <div className="pt-2 pb-12 px-4 bg-[url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png')] bg-repeat opacity-90 flex flex-col">
+                <div className="pt-4 pb-12 px-4 bg-[url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png')] bg-repeat opacity-90 flex flex-col">
                     {isTyping && (
                         <div className="bg-white rounded-3xl rounded-tl-none p-3 shadow-sm self-start max-w-[85%] relative speech-bubble text-gray-800 ml-2">
                             <div className="flex space-x-1 h-5 items-center">
