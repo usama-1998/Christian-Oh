@@ -2,6 +2,8 @@
 
 A premium Next.js portfolio website for Christian Oh, a real estate investor and Director of Investments at JNA.
 
+> **"Real Data. Real Results."**
+
 ## Features
 
 - 🎨 Modern, responsive design with dark/light mode toggle
@@ -66,9 +68,9 @@ christian-oh-portfolio/
 
 ## Key Sections
 
-1. **Hero** - Dynamic landing section with call-to-action
-2. **Video Showcase** - Curated success stories and testimonials
-3. **Methodology** - Data-driven approach to real estate
+1. **Hero** - Dynamic landing section with "Real Data. Real Results"
+2. **Video Showcase** - "The Monopoly Code" method and client success stories
+3. **Methodology** - Data-driven approach to real estate (1OPM Method)
 4. **Portfolio** - Interactive accordion gallery of properties
 5. **Contact** - Partner checklist and consultation booking form
 

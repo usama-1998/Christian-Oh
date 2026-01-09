@@ -189,7 +189,7 @@ const Hero = ({ onOpenStory, onOpenVideo }: { onOpenStory: () => void, onOpenVid
                     </Reveal>
 
                     <Reveal delay={200}>
-                        <h1 className="text-6xl md:text-8xl lg:text-[110px] font-light text-neutral-900 dark:text-white leading-[0.9] tracking-tighter mb-6 drop-shadow-sm dark:drop-shadow-2xl transition-colors duration-500">
+                        <h1 className="text-[100px] leading-[100px] font-light text-neutral-900 dark:text-white tracking-tighter mb-6 drop-shadow-sm dark:drop-shadow-2xl transition-colors duration-500">
                             Real Data. <br />
                             Real <span className="text-amber-600 dark:text-amber-500 font-serif italic">Results</span>
                         </h1>
@@ -239,18 +239,18 @@ const VideoShowcase = ({ onOpenVideo }: { onOpenVideo: (videoId: string) => void
     // Real Video IDs extracted from playlist
     const testimonials = [
         { id: "UyRY8srDA10", title: "Herron", name: "Client Success" },
-        { id: "61Y4_aS_nks", title: "Steven", name: "Client Success" },
-        { id: "D1x3ivP_ceU", title: "Stewardship Client", name: "Client Success" },
-        { id: "bmECa9mAZNk", title: "Client Success", name: "Client Success" },
+        { id: "61Y4_aS_nks", title: "Steven & Suyun", name: "Client Success" },
+        { id: "UyRY8srDA10", title: "Herron", name: "Client Success" },
+        { id: "61Y4_aS_nks", title: "Steven & Suyun", name: "Client Success" },
     ];
 
     return (
-        <section id="videos" className="bg-black py-20 text-white">
+        <section id="videos" className="py-20 bg-neutral-50 dark:bg-neutral-950 transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="mb-16 text-center">
                     <Reveal>
                         <span className="text-amber-500 font-mono text-xs tracking-[0.2em] uppercase">Client Success</span>
-                        <h2 className="text-3xl md:text-5xl font-light mt-4">The Monopoly Code</h2>
+                        <h2 className="text-3xl md:text-5xl font-light mt-4 text-neutral-900 dark:text-white">The Monopoly Code</h2>
                     </Reveal>
                 </div>
 
@@ -274,7 +274,7 @@ const VideoShowcase = ({ onOpenVideo }: { onOpenVideo: (videoId: string) => void
                 {/* Testimonials */}
                 <div className="mb-8">
                     <Reveal>
-                        <h3 className="text-2xl font-light text-white">Success Stories</h3>
+                        <h3 className="text-2xl font-light text-neutral-900 dark:text-white">Success Stories</h3>
                     </Reveal>
                 </div>
                 <div className="grid md:grid-cols-4 gap-6">
@@ -299,7 +299,7 @@ const VideoShowcase = ({ onOpenVideo }: { onOpenVideo: (videoId: string) => void
                                     </div>
 
                                     <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/90 to-transparent">
-                                        <p className="text-xs font-mono text-amber-500 uppercase tracking-widest mb-1">{video.name}</p>
+                                        {/* <p className="text-xs font-mono text-amber-500 uppercase tracking-widest mb-1">{video.name}</p> */}
                                         <p className="text-white font-medium leading-tight line-clamp-2">{video.title}</p>
                                     </div>
                                 </div>
@@ -447,18 +447,27 @@ const PortfolioSection = () => {
     ];
 
     return (
-        <section id="portfolio" className="py-24 bg-neutral-900 text-white relative overflow-hidden">
+        <section id="portfolio" className="py-24 bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-white relative overflow-hidden transition-colors duration-300">
             {/* Background decorative elements */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-amber-900/10 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-neutral-800/20 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-neutral-500/10 dark:bg-neutral-800/20 rounded-full blur-3xl pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-6 mb-20 text-center relative z-10">
                 <Reveal>
                     <span className="text-amber-500 font-mono text-xs tracking-[0.2em] uppercase">The Track Record</span>
-                    <h2 className="text-4xl md:text-5xl text-white mt-4 font-light">
+                    <h2 className="text-4xl md:text-5xl text-neutral-900 dark:text-white mt-4 font-light">
                         9 Properties <span className="text-neutral-500 font-serif italic">Managed</span>
                     </h2>
-                    <p className="text-2xl mt-4 text-amber-500 font-bold">$50,650 <span className="text-sm font-normal text-neutral-400">Monthly Rental Income</span></p>
+                    <p className="text-2xl mt-4 text-amber-500 font-bold">$50,650 <span className="text-sm font-normal text-neutral-600 dark:text-neutral-400">Monthly Rental Income</span></p>
+
+                    <div className="mt-8 flex flex-wrap justify-center gap-4">
+                        {[2021, 2024, 2025].map((year) => (
+                            <div key={year} className="px-5 py-2 border border-amber-500/30 bg-amber-500/5 rounded-full backdrop-blur-sm flex items-center gap-3 hover:bg-amber-500/10 transition-colors duration-300">
+                                <div className="w-1.5 h-1.5 rounded-full bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.5)]" />
+                                <span className="text-xs md:text-sm font-medium text-neutral-700 dark:text-neutral-300 tracking-wide">PropNex Millionaire {year}</span>
+                            </div>
+                        ))}
+                    </div>
                 </Reveal>
             </div>
 
@@ -475,14 +484,14 @@ const PortfolioSection = () => {
                                     {/* Empty Space for alignment */}
                                     <div className="hidden md:block w-1/2" />
 
-                                    {/* Timeline Node */}
-                                    <div className="absolute left-4 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center w-8 h-8 rounded-full bg-neutral-900 border border-amber-500 z-10 shadow-[0_0_15px_rgba(245,158,11,0.3)]">
-                                        <div className="w-2 h-2 bg-amber-500 rounded-full" />
+                                    {/* Timeline Node - Diamond Shape */}
+                                    <div className="absolute left-4 md:left-1/2 transform -translate-x-1/2 rotate-45 flex items-center justify-center w-5 h-5 bg-neutral-100 dark:bg-neutral-900 border border-amber-500 z-10 shadow-[0_0_15px_rgba(245,158,11,0.3)] transition-colors duration-300">
+                                        <div className="w-1.5 h-1.5 bg-amber-500" />
                                     </div>
 
                                     {/* Content Card */}
                                     <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${index % 2 === 0 ? 'md:pr-16 text-left' : 'md:pl-16 text-left'}`}>
-                                        <div className="group relative bg-neutral-800/40 backdrop-blur-sm border border-neutral-700/50 hover:border-amber-500/50 rounded-2xl p-1 overflow-hidden transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-amber-900/10 hover:bg-neutral-800/60">
+                                        <div className="group relative bg-white/60 dark:bg-neutral-800/40 backdrop-blur-sm border border-neutral-200 dark:border-neutral-700/50 hover:border-amber-500/50 rounded-2xl p-1 overflow-hidden transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-amber-900/10 dark:hover:bg-neutral-800/60">
 
                                             <div className="flex flex-col sm:flex-row h-full">
                                                 {/* Image Section */}
@@ -496,9 +505,9 @@ const PortfolioSection = () => {
                                                 {/* Text Section */}
                                                 <div className="p-5 sm:w-2/3 flex flex-col justify-between">
                                                     <div>
-                                                        <h3 className="text-xl font-medium text-white mb-1 group-hover:text-amber-500 transition-colors">{item.title}</h3>
-                                                        <p className="text-neutral-400 text-xs uppercase tracking-wider mb-3">{item.location}</p>
-                                                        <p className="text-neutral-300 text-sm leading-relaxed mb-4 line-clamp-3">
+                                                        <h3 className="text-xl font-medium text-neutral-900 dark:text-white mb-1 group-hover:text-amber-500 transition-colors">{item.title}</h3>
+                                                        <p className="text-neutral-500 dark:text-neutral-400 text-xs uppercase tracking-wider mb-3">{item.location}</p>
+                                                        <p className="text-neutral-600 dark:text-neutral-300 text-sm leading-relaxed mb-4 line-clamp-3">
                                                             {item.desc}
                                                         </p>
                                                     </div>
@@ -508,9 +517,9 @@ const PortfolioSection = () => {
                                                             <span className="text-[10px] text-amber-500/70 block uppercase">ROI</span>
                                                             <span className="text-sm font-bold text-amber-500">{item.stats.roi}</span>
                                                         </div>
-                                                        <div className="px-3 py-1.5 rounded bg-white/5 border border-white/10">
-                                                            <span className="text-[10px] text-neutral-400 block uppercase">Yield</span>
-                                                            <span className="text-sm font-bold text-neutral-200">{item.stats.yield}</span>
+                                                        <div className="px-3 py-1.5 rounded bg-white/50 dark:bg-white/5 border border-neutral-200 dark:border-white/10">
+                                                            <span className="text-[10px] text-neutral-500 dark:text-neutral-400 block uppercase">Yield</span>
+                                                            <span className="text-sm font-bold text-neutral-800 dark:text-neutral-200">{item.stats.yield}</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -546,7 +555,7 @@ const CTASection = ({ onOpenContact }: { onOpenContact: () => void }) => {
                     <Reveal>
                         <div>
                             <span className="text-amber-500 font-mono text-xs tracking-[0.2em] uppercase mb-4 block">Take Action</span>
-                            <h2 className="text-5xl md:text-7xl font-bold text-neutral-900 dark:text-neutral-100 mb-6 tracking-tight">
+                            <h2 className="text-5xl md:text-7xl font-light text-neutral-900 dark:text-neutral-100 mb-6 tracking-tight">
                                 Are You Ready <br />
                                 To <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-400 font-serif italic pr-2">Scale?</span>
                             </h2>
