@@ -13,8 +13,8 @@ export default function ContactWidget() {
     const hasOpened = useRef(false);
 
     // Hardcoded phone number for now - replace with actual number
-    const PHONE_NUMBER = "6590000000"; // Replace with actual number
-    const PHONE_DISPLAY = "+65 9000 0000";
+    const PHONE_NUMBER = "6583660188"; // Replace with actual number
+    const PHONE_DISPLAY = "+65 8366 0188";
 
     useEffect(() => {
         setIsMounted(true);

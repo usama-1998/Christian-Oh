@@ -40,7 +40,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" className={`${inter.variable} ${playfair.variable} ${jetbrainsMono.variable}`}>
-            <body className={inter.className}>
+            <body className={inter.className} suppressHydrationWarning={true}>
                 {children}
                 <ContactWidget />
             </body>

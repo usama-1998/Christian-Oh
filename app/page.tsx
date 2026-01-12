@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowRight, BarChart2, Building2, ChevronDown, Instagram, Linkedin, Play, TrendingUp, Youtube, Menu, X, Mail, Phone, ArrowUpRight, Send, Sun, Moon, Check } from 'lucide-react';
 import Image from 'next/image';
+import AboutSection from './components/AboutSection';
 
 
 // --- Custom Hook for Scroll Animations ---
@@ -240,8 +241,6 @@ const VideoShowcase = ({ onOpenVideo }: { onOpenVideo: (videoId: string) => void
     const testimonials = [
         { id: "UyRY8srDA10", title: "Herron", name: "Client Success" },
         { id: "61Y4_aS_nks", title: "Steven & Suyun", name: "Client Success" },
-        { id: "UyRY8srDA10", title: "Herron", name: "Client Success" },
-        { id: "61Y4_aS_nks", title: "Steven & Suyun", name: "Client Success" },
     ];
 
     return (
@@ -250,7 +249,7 @@ const VideoShowcase = ({ onOpenVideo }: { onOpenVideo: (videoId: string) => void
                 <div className="mb-16 text-center">
                     <Reveal>
                         <span className="text-amber-500 font-mono text-xs tracking-[0.2em] uppercase">Client Success</span>
-                        <h2 className="text-3xl md:text-5xl font-light mt-4 text-neutral-900 dark:text-white">The Monopoly Code</h2>
+                        <h2 className="text-3xl md:text-5xl font-light mt-4 text-neutral-900 dark:text-white">Client Success Story</h2>
                     </Reveal>
                 </div>
 
@@ -277,14 +276,14 @@ const VideoShowcase = ({ onOpenVideo }: { onOpenVideo: (videoId: string) => void
                         <h3 className="text-2xl font-light text-neutral-900 dark:text-white">Success Stories</h3>
                     </Reveal>
                 </div>
-                <div className="grid md:grid-cols-4 gap-6">
+                <div className="grid md:grid-cols-2 gap-6">
                     {testimonials.map((video, index) => (
                         <Reveal key={index} delay={300 + (index * 100)}>
                             <button
                                 onClick={() => onOpenVideo(video.id)}
                                 className="group cursor-pointer block w-full text-left"
                             >
-                                <div className="aspect-[9/16] bg-neutral-900 rounded-xl overflow-hidden relative border border-neutral-800 group-hover:border-amber-500 transition-colors">
+                                <div className="aspect-video bg-neutral-900 rounded-xl overflow-hidden relative border border-neutral-800 group-hover:border-amber-500 transition-colors">
                                     <img
                                         src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
                                         alt={video.title} // Fallback to Title if Name is not generic
@@ -342,9 +341,9 @@ const MethodologySection = () => {
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-20">
                     <Reveal>
-                        <span className="text-amber-600 dark:text-amber-500 font-mono text-xs tracking-[0.2em] uppercase">The JNA Methodology</span>
+                        <span className="text-amber-600 dark:text-amber-500 font-mono text-xs tracking-[0.2em] uppercase">The JNA Investment Methodology</span>
                         <h2 className="text-4xl md:text-5xl text-neutral-900 dark:text-white mt-4 font-light">
-                            The 1OPM <span className="font-serif italic text-neutral-500">Method</span>
+                            1st OPM <span className="font-serif italic text-neutral-500">Method</span>
                         </h2>
                     </Reveal>
                 </div>
@@ -454,9 +453,9 @@ const PortfolioSection = () => {
 
             <div className="max-w-7xl mx-auto px-6 mb-20 text-center relative z-10">
                 <Reveal>
-                    <span className="text-amber-500 font-mono text-xs tracking-[0.2em] uppercase">The Track Record</span>
+                    <span className="text-amber-500 font-mono text-xs tracking-[0.2em] uppercase">My Property Portfolio</span>
                     <h2 className="text-4xl md:text-5xl text-neutral-900 dark:text-white mt-4 font-light">
-                        9 Properties <span className="text-neutral-500 font-serif italic">Managed</span>
+                        My 9 SG Properties <span className="text-neutral-500 font-serif italic">Portfolio</span>
                     </h2>
                     <p className="text-2xl mt-4 text-amber-500 font-bold">$50,650 <span className="text-sm font-normal text-neutral-600 dark:text-neutral-400">Monthly Rental Income</span></p>
 
@@ -655,6 +654,12 @@ export default function Home() {
                     onOpenStory={() => setModalType('story')}
                     onOpenVideo={() => {
                         setActiveVideoId("I2ykHYy_fhU");
+                        setModalType('video');
+                    }}
+                />
+                <AboutSection
+                    onOpenVideo={(videoId) => {
+                        setActiveVideoId(videoId);
                         setModalType('video');
                     }}
                 />
