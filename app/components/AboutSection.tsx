@@ -35,11 +35,11 @@ const AboutSection = ({ onOpenVideo }: AboutSectionProps) => {
                     <div className="lg:col-span-4 flex flex-col justify-center">
                         <div className="relative aspect-[9/16] w-full bg-neutral-900 rounded-2xl overflow-hidden shadow-2xl border border-neutral-800 group hover:border-amber-500/50 transition-all duration-500">
                             <button
-                                onClick={() => onOpenVideo("I2ykHYy_fhU")}
+                                onClick={() => onOpenVideo("sMFja0TBvBI")}
                                 className="w-full h-full relative group cursor-pointer"
                             >
                                 <Image
-                                    src="https://img.youtube.com/vi/I2ykHYy_fhU/maxresdefault.jpg"
+                                    src="https://img.youtube.com/vi/sMFja0TBvBI/maxresdefault.jpg"
                                     alt="The Monopoly Code"
                                     fill
                                     className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
