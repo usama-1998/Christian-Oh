@@ -13,8 +13,8 @@ export default function ContactWidget() {
     const hasOpened = useRef(false);
 
     // Hardcoded phone number for now - replace with actual number
-    const PHONE_NUMBER = "6583660188"; // Replace with actual number
-    const PHONE_DISPLAY = "+65 8366 0188";
+    const PHONE_NUMBER = "6583397710"; // Christine's number
+    const PHONE_DISPLAY = "+65 8339 7710";
 
     useEffect(() => {
         setIsMounted(true);
@@ -87,13 +87,13 @@ export default function ContactWidget() {
                     <div className="flex items-center space-x-3">
                         <div className="relative">
                             <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center overflow-hidden">
-                                <img src="/hero.png" alt="Christian Oh" className="w-full h-full object-cover" />
+                                <img src="/whatsapdp.png" alt="Christine" className="w-full h-full object-cover" />
                             </div>
                             <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-400 border-2 border-[#075E54] rounded-full"></div>
                         </div>
                         <div>
-                            <h3 className="font-semibold text-base leading-tight">Christian Oh</h3>
-                            <p className="text-xs text-green-100 opacity-80">Replies within an hour</p>
+                            <h3 className="font-semibold text-base leading-tight">Christine</h3>
+                            <p className="text-xs text-green-100 opacity-80">Christian Oh's PA</p>
                         </div>
                     </div>
                     <button
