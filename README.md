@@ -50,6 +50,7 @@ npm start
 ```
 christian-oh-portfolio/
 ├── app/
+│   ├── components/ # Reusable UI components
 │   ├── layout.tsx      # Root layout with fonts and metadata
 │   ├── page.tsx        # Main landing page with all components
 │   └── globals.css     # Global styles and animations
@@ -71,10 +72,11 @@ christian-oh-portfolio/
 
 1. **Hero** - Dynamic landing section with "Real Data. Real Results"
 2. **Video Showcase** - "The Monopoly Code" method and client success stories
-3. **Methodology** - Data-driven approach to real estate (1OPM Method)
-4. **Portfolio** - Interactive accordion gallery of properties
-5. **Contact** - Partner checklist and consultation booking form
-6. **WhatsApp Widget** - Fixed contact button with popup chat interface
+3. **About** - Professional background and Bio
+4. **Methodology** - Data-driven approach to real estate (1OPM Method)
+5. **Portfolio** - Interactive accordion gallery of properties
+6. **Contact** - Partner checklist and consultation booking form
+7. **WhatsApp Widget** - Fixed contact button with popup chat interface
 
 ## Customization
 
