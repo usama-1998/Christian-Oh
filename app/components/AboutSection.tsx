@@ -20,7 +20,7 @@ const AboutSection = ({ onOpenVideo }: AboutSectionProps) => {
                     <div className="lg:col-span-3 flex flex-col h-full">
                         <div className="relative w-full h-full aspect-[3/4] lg:aspect-auto lg:h-full rounded-2xl overflow-hidden group border border-neutral-200 dark:border-neutral-800 transition-all duration-500 hover:border-amber-500/30 shadow-lg">
                             <Image
-                                src="/hero.png"
+                                src="/About me image.jpg"
                                 alt="Christian Oh"
                                 fill
                                 className="object-cover"
